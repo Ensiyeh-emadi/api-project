@@ -9,12 +9,12 @@ async function fetchData() {
     console.log(error);
   }
 }
-fetchData().then((res) => console.log(res.drinks));
+// fetchData().then((res) => console.log(res.drinks));
 
 async function getdrinks() {
-    const drinksData = await fetchData();
-    // console.log(drinksData.drinks);
-  drinksData.drinks.forEach(element => {
+  const drinksData = await fetchData();
+  // console.log(drinksData.drinks);
+  drinksData.drinks.forEach((element) => {
     const main = document.querySelector("main");
     const card = document.createElement("div");
     const cardTitle = document.createElement("div");
@@ -22,17 +22,14 @@ async function getdrinks() {
     const img = document.createElement("img");
     card.classList.add("card");
     cardTitle.classList.add("card-title");
-   img.classList.add("card-img-top");
+    img.classList.add("card-img-top");
     title.innerHTML = element.strDrink;
     img.src = element.strDrinkThumb;
     img.alt = element.strDrink;
     cardTitle.appendChild(title);
     card.append(img, cardTitle);
     main.appendChild(card);
-
-    
   });
-
-  }
+}
 
 getdrinks();
