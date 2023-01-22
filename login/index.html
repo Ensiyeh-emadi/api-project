@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login">
+        <div class="container">
+          <h1>Log in</h1>
+          <input class="email" type="email" placeholder="Email" />
+          <input
+            class="password"
+            type="password"
+            placeholder="Password"
+          /><br />
+          <input class="remember" type="checkbox" /><span>Remember me</span>
+          <a href="#">Forgot password?</a>
+          <button onclick="validate()">log in</button>
+          <hr />
+          <p>Or Connect With</p>
+          <hr />
+          <ul>
+            <li><i class="fab fa-facebook-f fa-2x"></i></li>
+            <li><i class="fab fa-twitter fa-2x"></i></li>
+            <li><i class="fab fa-github fa-2x"></i></li>
+            <li><i class="fab fa-linkedin-in fa-2x"></i></li>
+          </ul>
+          <div class="clearfix"></div>
+          <span class="copyright">&copy;2023</span>
+        </div>
+      </div>
+      <div class="register">
+        <div class="container">
+          <i class="fas fa-user-plus fa-5x"></i>
+          <h2>Hello,friend!</h2>
+          <p>Enter your personal details</p>
+          <button>Register <i class="fas fa-arrow-circle-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
