@@ -5,6 +5,7 @@
 }
 .card:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 .card:hover .card-title h5 {
   font-size: 1.35rem;
