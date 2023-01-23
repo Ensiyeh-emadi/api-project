@@ -58,7 +58,7 @@
         </div>
 
         <footer class="login__footer">
-          <input type="submit" value="Login" onclick="validate()" />
+          <input type="submit" value="Login" onclick="auth()" />
         </footer>
       </form>
     </div>
@@ -78,6 +78,18 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
     ></script>
-    <script src="./login/index.js"></script>
+    <script>
+      function auth() {
+        var email = document.getElementsByClassName("email").value;
+        var password = document.getElementsByClassName("password").value;
+        if (email == "admin@gmail.com" && password == "admin123") {
+          window.location.assign("home.html");
+          alert("login succesfully");
+        } else {
+          alert("Invalid Information");
+          return;
+        }
+      }
+    </script>
   </body>
 </html>
