@@ -44,16 +44,11 @@
 
         <div class="login__body">
           <div class="form__field">
-            <input type="email" placeholder="Email" required class="email" />
+            <input type="email" id="email" aria-describedby="emailHelp" />
           </div>
 
           <div class="form__field">
-            <input
-              type="password"
-              placeholder="Password"
-              required
-              class="password"
-            />
+            <input type="password" id="password" placeholder="password" />
           </div>
         </div>
 
@@ -80,14 +75,15 @@
     ></script>
     <script>
       function auth() {
-        var email = document.getElementsByClassName("email").value;
-        var password = document.getElementsByClassName("password").value;
-        if (email == "admin@gmail.com" && password == "admin123") {
-          window.location.assign("home.html");
-          alert("login succesfully");
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        if (email === "admin@gmail.com" && password === "user") {
+          window.location.assign("./home.html");
+          alert("Your login was successful");
         } else {
-          alert("Invalid Information");
-          return;
+          window.location.assign("./login.html");
+          alert("Your login was not successful");
         }
       }
     </script>
