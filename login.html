@@ -44,22 +44,11 @@
 
         <div class="login__body">
           <div class="form__field">
-            <input
-              type="email"
-              id="email"
-              aria-describedby="emailHelp"
-              placeholder="email"
-              required
-            />
+            <input type="email" id="email" aria-describedby="emailHelp" />
           </div>
 
           <div class="form__field">
-            <input
-              type="password"
-              id="password"
-              placeholder="password"
-              required
-            />
+            <input type="password" id="password" placeholder="password" />
           </div>
         </div>
 
@@ -93,8 +82,8 @@
           window.location.assign("./home.html");
           alert("Your login was successful");
         } else {
-          window.location.assign("./login.html");
           alert("Your login was not successful");
+          return;
         }
       }
     </script>
